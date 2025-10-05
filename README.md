@@ -1,2 +1,35 @@
-# ManualMuse
-The tool extracts audio amplitude data from MP3 files, performs Fourier Transform (FFT) and Short-Time Fourier Transform (STFT) on the amplitude data, and generates visualizations including time-domain waveforms, frequency-domain spectrograms, and time-frequency analysis graphs.从 MP3 文件中提取音频幅值数据，对幅值数据进行傅里叶变换（FFT）和切片傅里叶变换（STFT），并生成时域波形、频域频谱和时频分析图。
+# ManualMuse - STFT 音频分析工具
+
+本项目是一个用于音频信号处理的Python工具集，主要功能包括：
+1. 从MP3文件中提取音频幅值数据
+2. 对音频数据进行傅里叶变换(FFT)和短时傅里叶变换(STFT)
+3. 生成频谱分析结果和可视化图表
+
+## 主要功能
+
+### 1. 音频幅值提取
+- 从MP3文件中提取音频波形数据
+- 支持自定义采样率（默认480Hz）
+- 输出时间-幅值CSV文件
+
+### 2. 频谱分析
+- 傅里叶变换(FFT)分析音频频率成分
+- 短时傅里叶变换(STFT)分析时频特性
+- 自动检测主要频率峰值
+
+### 3. 数据可视化
+![项目截图](./output/man_amplitude_plot.png)
+- 生成原始波形图
+- 生成频谱图
+- 生成时频热力图
+
+### ⚙️ 安装依赖
+```bash
+pip install numpy matplotlib pydub pandas scipy
+```
+
+### 4. 使用方法
+
+1. 准备音频文件，将.mp3格式的文件放入./MP3/目录下
+2. 点击run_main.bat运行程序
+3. 程序运行结束后，结果文件会保存在./output/目录下
